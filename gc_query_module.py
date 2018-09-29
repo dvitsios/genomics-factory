@@ -27,14 +27,12 @@ def get_num_of_alleles_from_gc(gc_len):
 			the lowest 'i' that gives [Sum{i}, i=1,...N] == gc_len
 	"""
 
-	num_alleles = None
 	sum = 0
 
 	for i in range(1, gc_len):
 		sum += i
 		if sum == gc_len:
-			num_alleles = i
-			return num_alleles
+			return i
 
 
 def get_gc_indices_for_alt_allele(num_alleles, alt_idx=0, verbose=True):
